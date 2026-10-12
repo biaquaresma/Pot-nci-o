@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void apresentacao()
+{
+    printf("\npotenciacao\n");
+}
+
+float base()
+{
+    float b;
+    printf("\ndigite um numero: ");
+    scanf("%f",&b);
+
+   return b;
+}
+
+int expoente()
+{
+    int exp;
+    do{
+    printf("digite o expoente: ");
+    scanf("%i",&exp);
+    if (exp<0)
+    printf("digite um expoente maior que 0");
+    }while(exp<0);
+
+    return exp;
+}
+
+
+float expoente (float x, int y)
+{
+
+    if(y==0) {
+        return 1;
+    }
+
+    return x*expoente(x, y-1);
+
+}
+
+int main()
+
+{
+    apresentacao();
+    float a=base();
+    int b= expoente();
+    float pot=potencia(a,b);
+    printf("%.2f",pot);
+}
+
+n+1<kesimo
